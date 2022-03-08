@@ -1,0 +1,40 @@
+{
+  "todos": [
+    {
+      "date": "2022-03-31",
+      "action": "todo baru",
+      "isDone": false,
+      "id": 5
+    }
+  ],
+  "band_members": [
+    {
+      "id": 1,
+      "full_name": "Seto",
+      "instrument": "Guitar",
+      "date_of_birth": "24 Januari 1995",
+      "hobby": "Fishing"
+    },
+    {
+      "id": 2,
+      "full_name": "Steve",
+      "instrument": "Vocal",
+      "date_of_birth": "12 November 2002",
+      "hobby": "Playing Games"
+    },
+    {
+      "id": 3,
+      "full_name": "Mark",
+      "instrument": "Drums",
+      "date_of_birth": "13 September 2001",
+      "hobby": "Reading"
+    },
+    {
+      "id": 4,
+      "full_name": "Bill",
+      "instrument": "Piano",
+      "date_of_birth": "14 Februari 1990",
+      "hobby": "Sleeping"
+    }
+  ]
+}
