@@ -36,5 +36,61 @@
       "date_of_birth": "14 Februari 1990",
       "hobby": "Sleeping"
     }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "product_name": "Leci",
+      "price": 12000,
+      "category": "Buah"
+    },
+    {
+      "id": 2,
+      "product_name": "Jeruk",
+      "price": 7000,
+      "category": "Buah"
+    },
+    {
+      "id": 3,
+      "product_name": "Harry Potter",
+      "price": 20000,
+      "category": "Buku"
+    },
+    {
+      "id": 4,
+      "product_name": "Chitato",
+      "price": 15000,
+      "category": "Snack"
+    },
+    {
+      "id": 5,
+      "product_name": "Mangga",
+      "price": 5000,
+      "category": "Buah"
+    },
+    {
+      "id": 6,
+      "product_name": "LOTR",
+      "price": 12000,
+      "category": "Buku"
+    },
+    {
+      "id": 7,
+      "product_name": "Naruto",
+      "price": 20000,
+      "category": "Buku"
+    },
+    {
+      "id": 8,
+      "product_name": "Lay's",
+      "price": 13000,
+      "category": "Snack"
+    },
+    {
+      "id": 9,
+      "product_name": "Sari Roti",
+      "price": 4000,
+      "category": "Snack"
+    }
   ]
 }
