@@ -9,6 +9,7 @@ import HomePage from "./pages/home";
 import NotFoundPage from "./pages/404";
 import BandMemberPage from "./pages/band-member";
 import ProductPage from "./pages/product";
+import UsersPage from "./pages/users";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/tour" element={<TourPage />} />
         <Route path="/band-member/:bandMemberId" element={<BandMemberPage />} />
         <Route path="/product" element={<ProductPage />}></Route>
+        <Route path="/users" element={<UsersPage />}></Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

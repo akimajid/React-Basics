@@ -10,6 +10,7 @@ const Navbar = () => {
         <Link to="/band">Band</Link>
         <Link to="/tour">Tour</Link>
         <Link to="/product">Product</Link>
+        <Link to="/users">Users</Link>
         <a href="contact.html">Contact</a>
       </div>
       <div className="search-wrapper">
