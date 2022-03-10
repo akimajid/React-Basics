@@ -16,6 +16,7 @@ const Navbar = () => {
         <Link to="/product">Product</Link>
         <Link to="/users">Users</Link>
         <Link to="/">{userSelector.username}</Link>
+        <Link to="/counter">Counter</Link>
         <a href="contact.html">Contact</a>
       </div>
       <div className="search-wrapper">

@@ -11,6 +11,7 @@ import BandMemberPage from "./pages/band-member";
 import ProductPage from "./pages/product";
 import UsersPage from "./pages/users";
 import LoginPage from "./pages/login";
+import CounterPage from "./pages/counter";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/product" element={<ProductPage />} />
         <Route path="/users" element={<UsersPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="counter" element={<CounterPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
