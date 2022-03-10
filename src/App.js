@@ -10,6 +10,7 @@ import NotFoundPage from "./pages/404";
 import BandMemberPage from "./pages/band-member";
 import ProductPage from "./pages/product";
 import UsersPage from "./pages/users";
+import LoginPage from "./pages/login";
 
 function App() {
   return (
@@ -21,8 +22,9 @@ function App() {
         <Route path="/todo" element={<TodoPage />} />
         <Route path="/tour" element={<TourPage />} />
         <Route path="/band-member/:bandMemberId" element={<BandMemberPage />} />
-        <Route path="/product" element={<ProductPage />}></Route>
-        <Route path="/users" element={<UsersPage />}></Route>
+        <Route path="/product" element={<ProductPage />} />
+        <Route path="/users" element={<UsersPage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

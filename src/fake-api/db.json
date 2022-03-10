@@ -794,5 +794,12 @@
       "job_area": "Directives",
       "id": 100
     }
-  ]
+  ],
+"user_accounts": [
+  {
+    "id": 1,
+    "username": "seto",
+    "password": "password123"
+  }
+]
 }
