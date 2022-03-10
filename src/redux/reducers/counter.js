@@ -15,6 +15,11 @@ const counterReducer = (state = initial_state, action ) => {
         }
     } else if (action.type === "RESET_COUNTER") {
         return initial_state
+    } else if (action.type === "SET_COUNTER") {
+        return{
+            ...state,
+            count: parseInt(action.payload)
+        }
     }
     
     return state

@@ -4,11 +4,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { Button } from "reactstrap";
 
 const CounterPage = () => {
-  const [count, setCount] = useState(0);
+  const [inputValue, setInputValue] = useState("")
 
   const countSelector = useSelector((state) => state.counter);
 
   const dispatch = useDispatch();
+
+  const inputHandler = (event) => {
+    const { value } = event.target
+
+    setInputValue(value)
+  }
 
   const counterButton = (dir) => {
     if (dir === "plus") {
@@ -23,6 +29,10 @@ const CounterPage = () => {
       dispatch({
         type: "RESET_COUNTER",
       });
+    } else if (dir === "set") {
+        dispatch({
+            type: "SET_COUNTER", payload: inputValue
+        })
     }
   };
 
@@ -39,10 +49,10 @@ const CounterPage = () => {
       </Center>
       <Center>
         <Box>
-          <Input width="sm" margin="10"></Input>
+          <Input onChange={inputHandler} width="sm" margin="2"></Input>
           <Flex justifyContent="center">
             <Box marginX="2">
-              <Button>Set Counter</Button>
+              <Button onClick={() => counterButton("set")}>Set Counter</Button>
             </Box>
             <Box marginX="2">
               <Button onClick={() => counterButton("reset")}>
