@@ -1,7 +1,8 @@
 import { Box, Button, Center, FormLabel, Input, Text } from "@chakra-ui/react";
 import { axiosInstance } from "../configs/api";
 import { useState } from "react";
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
+import { Navigate } from "react-router-dom"
 
 const LoginPage = () => {
   const [usernameInput, setUsernameInput] = useState("");
@@ -10,6 +11,8 @@ const LoginPage = () => {
   const [userData, setUserData] = useState({});
 
   const userSelector = useSelector((state) => state.user)
+
+  const dispatch = useDispatch()
 
   const inputHandler = (event, field) => {
     const { value } = event.target;
@@ -29,12 +32,25 @@ const LoginPage = () => {
         },
       })
       .then((res) => {
-        setUserData(res.data[0]);
+        const userData = res.data[0]
+
+        dispatch({
+          type: "LOGIN_USER",
+          payload: userData
+        })
+
+        localStorage.setItem("user_data", JSON.stringify(userData))
       })
       .catch((err) => {
         console.log(err);
       });
+
+      
   };
+
+  if (userSelector.id) {
+    return <Navigate to="/" />
+  }
 
   return (
     <Center>

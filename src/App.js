@@ -1,6 +1,8 @@
 import "./assets/styles.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useEffect } from "react"
+import { useDispatch } from "react-redux"
 import TodoPage from './pages/todo';
 import BandPage from "./pages/band";
 import Navbar from "./components/Navbar/Navbar";
@@ -14,6 +16,22 @@ import LoginPage from "./pages/login";
 import CounterPage from "./pages/counter";
 
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    const saveUserData = localStorage.getItem("user_data")
+
+    if (saveUserData) {
+      const parsedUserData = JSON.parse(saveUserData)
+  
+      dispatch ({
+        type: "LOGIN_USER",
+        payload : parsedUserData
+      })
+    }
+
+  }, [])
+
   return (
     <BrowserRouter>
       <Navbar />

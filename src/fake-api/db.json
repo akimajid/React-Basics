@@ -799,7 +799,11 @@
   {
     "id": 1,
     "username": "seto",
-    "password": "password123"
+    "password": "password123",
+    "email": "seto@mail.com",
+    "full_name": "Seto Otes",
+    "role": "user"
+    
   }
 ]
 }
